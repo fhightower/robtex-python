@@ -5,7 +5,7 @@ Credits
 Development Lead
 ================
 
-* Floyd Hightower <>
+* Floyd Hightower
 
 Contributors
 ============

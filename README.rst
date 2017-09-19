@@ -24,17 +24,10 @@ Robtex Python
      :target: https://pyup.io/repos/github/fhightower/robtex_python/
      :alt: Updates
 
-Simple python wrapper for the Robtex API.
-
+Simple python wrapper for the `Robtex API <https://www.robtex.com/api/>`_ . This project is currently **under development**. Feel free to contribute and don't forget to add yourself to the `AUTHORS.rst <https://github.com/fhightower/robtex-python/blob/master/AUTHORS.rst>`_ file!
 
 * Free software: MIT license
-* Documentation: https://robtex-python.readthedocs.io
-
-
-Features
-========
-
-* TODO
+* Documentation: https://robtex-python.readthedocs.io (<-- this is coming soon)
 
 Credits
 =======
