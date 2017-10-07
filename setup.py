@@ -28,7 +28,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author="Floyd Hightower",
     author_email='',
-    url='https://github.com/fhightower/robtex_python',
+    url='https://github.com/fhightower/robtex-python',
     packages=find_packages(exclude=('tests', 'docs')),
     entry_points={
         'console_scripts': [

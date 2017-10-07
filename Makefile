@@ -88,7 +88,7 @@ install: clean ## install the package to the active Python's site-packages
 	python setup.py install
 
 upstream: ## set the upstream for the repository
-	git remote set-upstream https://github.com/fhightower/robtex_python.git
+	git remote set-upstream https://github.com/fhightower/robtex-python.git
 
 init: ## install the development requirements with pip (related to python2.x)
 	pip install -r requirements_dev.txt
