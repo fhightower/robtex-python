@@ -4,33 +4,44 @@
 """Robtex Python.
 
 Usage:
-    # TODO: Add usage instructions here
-    robtex_python ship new <name>...
-    robtex_python ship <name> move <x> <y> [--speed=<kn>]
-    robtex_python ship shoot <x> <y>
-    robtex_python mine (set|remove) <x> <y> [--moored | --drifting]
+    robtex_python --ip=<ip>
+    robtex_python --as=<asn>
+    robtex_python --pdns-forward=<hostname>
+    robtex_python --pdns-reverse=<ip>
     robtex_python (-h | --help)
     robtex_python --version
 
 Options:
     -h --help     Show this screen.
     --version     Show version.
-    # TODO: Add options here
-    --speed=<kn>  Speed in knots [default: 10].
-    --moored      Moored (anchored) mine.
-    --drifting    Drifting mine.
+    --ip=<ip>  IP Address.
+    --as=<asn>  ASN.
+    --pdns-forward=<hostname>  pDNS Forward Hostname.
+    --pdns-reverse=<ip>  pDNS Reverse IP Address.
 """
 
 from docopt import docopt
 
 from .__init__ import __version__ as VERSION
+from .robtex_python import ip_query, as_query, pdns_forward, pdns_reverse
 
 
-def main(args=None):
+def main(arguments=None):
     """Console script for robtex_python"""
-    arguments = docopt(__doc__, version=VERSION)
-    print(arguments)
-    print("You can modify the output of the CLI by making changes to robtex_python.cli.main .")
+    if arguments is None:
+        arguments = docopt(__doc__, version=VERSION)
+    else:
+        # if there are values passed into this function for testing, move along
+        pass
+
+    if arguments.get('--ip'):
+        return ip_query(arguments['--ip'])
+    elif arguments.get('--as'):
+        return as_query(arguments['--as'])
+    elif arguments.get('--pdns-forward'):
+        return pdns_forward(arguments['--pdns-forward'])
+    elif arguments.get('--pdns-reverse'):
+        return pdns_reverse(arguments['--pdns-reverse'])
 
 
 if __name__ == "__main__":

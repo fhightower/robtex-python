@@ -8,11 +8,9 @@ test_robtex_python
 Tests for `robtex_python` module.
 """
 
-import docopt
 import pytest
 
 from robtex_python import robtex_python
-from robtex_python import cli
 
 
 @pytest.fixture
@@ -24,25 +22,11 @@ def command_line_args():
     args['asn'] = "15169"
     args['host'] = "example.com"
 
-    # TODO: Add command line arguments here (see: https://github.com/docopt/docopt#api)
-
     return args
 
 
-def test_command_line_interface(command_line_args):
-    """Test the command line usage of this project."""
-    # TODO: Add more robust testing here
-    with pytest.raises(docopt.DocoptExit) as exc_info:
-        cli.main()
-
-    # get the error message
-    error_message = exc_info.value
-    # make sure the error message contains the expected usage output
-    assert "Usage:" in str(error_message)
-
-
 def test_ip_query(command_line_args):
-    """Test the command line usage of this project."""
+    """Test the ip query."""
     response = robtex_python.ip_query(command_line_args['ip'])
 
     assert response['status'] == "ok"
@@ -50,14 +34,14 @@ def test_ip_query(command_line_args):
 
 
 def test_as_query(command_line_args):
-    """Test the command line usage of this project."""
+    """Test the asn query."""
     response = robtex_python.as_query(command_line_args['asn'])
 
     assert response['status'] == "ok"
 
 
 def test_pdns_forward_query(command_line_args):
-    """Test the command line usage of this project."""
+    """Test the pdns forward query."""
     response = robtex_python.pdns_forward(command_line_args['host'])
 
     assert len(response) > 1
@@ -65,7 +49,7 @@ def test_pdns_forward_query(command_line_args):
 
 
 def test_pdns_reverse_query(command_line_args):
-    """Test the command line usage of this project."""
+    """Test the pdns reverse query."""
     response = robtex_python.pdns_reverse(command_line_args['ip'])
 
     assert len(response) > 1

@@ -15,7 +15,7 @@ def get(api_path):
         try:
             # return the json from the API endpoint
             return json.loads(response.text)
-        except:
+        except ValueError:
             # handle the list of dictionaries returned from the pdns endpoints
             return [json.loads(entry) for entry in response.text.split("\r\n") if entry is not '']
     else:

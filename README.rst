@@ -86,7 +86,17 @@ You can use Robtex Python in a script as follows:
 Via Command Line
 ----------------
 
-Support for Robtex Python from the command line is coming soon!
+You can use Robtex Python as a command-line tool as follows:
+
+.. code-block:: shell
+
+    Usage:
+        robtex_python --ip=<ip>
+        robtex_python --as=<asn>
+        robtex_python --pdns-forward=<hostname>
+        robtex_python --pdns-reverse=<ip>
+        robtex_python (-h | --help)
+        robtex_python --version
 
 Credits
 =======
