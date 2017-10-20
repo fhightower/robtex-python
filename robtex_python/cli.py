@@ -35,17 +35,21 @@ def main(arguments=None):
         pass
 
     if arguments.get('--ip'):
-        print(ip_query(arguments['--ip']))
-        return ip_query(arguments['--ip'])
+        output = ip_query(arguments['--ip'])
+        print(output)
+        return output
     elif arguments.get('--as'):
-        print(as_query(arguments['--as']))
-        return as_query(arguments['--as'])
+        output = as_query(arguments['--as'])
+        print(output)
+        return output
     elif arguments.get('--pdns-forward'):
-        print(pdns_forward(arguments['--pdns-forward']))
-        return pdns_forward(arguments['--pdns-forward'])
+        output = pdns_forward(arguments['--pdns-forward'])
+        print(output)
+        return output
     elif arguments.get('--pdns-reverse'):
-        print(pdns_reverse(arguments['--pdns-reverse']))
-        return pdns_reverse(arguments['--pdns-reverse'])
+        output = pdns_reverse(arguments['--pdns-reverse'])
+        print(output)
+        return output
 
 
 if __name__ == "__main__":
