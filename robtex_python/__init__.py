@@ -4,4 +4,4 @@
 from .robtex_python import ip_query, as_query, pdns_forward, pdns_reverse
 
 __author__ = """Floyd Hightower"""
-__version__ = '0.3.1'
+__version__ = '1.0.0'
