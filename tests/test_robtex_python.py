@@ -10,7 +10,7 @@ Tests for `robtex_python` module.
 
 import pytest
 
-from robtex_python import robtex_python
+import robtex_python
 
 
 @pytest.fixture

@@ -80,7 +80,7 @@ You can use Robtex Python in a script as follows:
 
 .. code-block:: python
 
-    from robtex_python import robtex_python
+    import robtex_python
     response = robtex_python.pdns_forward("example.com")
 
 Via Command Line
