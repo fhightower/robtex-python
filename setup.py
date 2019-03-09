@@ -23,7 +23,7 @@ test_requirements = [
 
 setup(
     name='robtex_python',
-    version='1.0.0',
+    version='1.0.1',
     description="Simple python wrapper for the Robtex API.",
     long_description=readme + '\n\n' + history,
     author="Floyd Hightower",
