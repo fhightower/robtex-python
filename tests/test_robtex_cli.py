@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-test_robtex_python
+test_robtex_cli
 ----------------------------------
 
 Tests for `robtex_python` cli interface.
