@@ -14,7 +14,7 @@ with open('LICENSE') as license_file:
 
 requirements = [
     'docopt>=0.6',
-    # TODO: put package requirements here
+    'requests'
 ]
 
 test_requirements = [
