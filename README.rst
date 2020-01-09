@@ -1,6 +1,6 @@
-*******************************
+*************
 Robtex Python
-*******************************
+*************
 
 
 .. image:: https://img.shields.io/pypi/v/robtex_python.svg
