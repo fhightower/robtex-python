@@ -1,7 +1,8 @@
-env:
-- TOXENV=py36
-- TOXENV=py37
-install: pip install -U tox
+after_success:
+- codecov
+install:
+- pip install requests
 language: python
 python: 3.7
-script: tox -e ${TOXENV}
+script:
+- py.test --cov=./
