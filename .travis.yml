@@ -4,6 +4,7 @@ install:
 - pip install pytest
 - pip install pytest-cov
 - pip install codecov
+- pip install docopt
 - pip install requests
 language: python
 python: 3.7
