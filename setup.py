@@ -6,9 +6,6 @@ from setuptools import setup, find_packages
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
-
 with open('LICENSE') as license_file:
     license = license_file.read()
 
@@ -25,7 +22,7 @@ setup(
     name='robtex_python',
     version='1.0.2',
     description="Simple python wrapper for the Robtex API.",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author="Floyd Hightower",
     author_email='',
     url='https://github.com/fhightower/robtex-python',
