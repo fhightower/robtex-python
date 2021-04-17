@@ -1,13 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
-
-with open('LICENSE') as license_file:
-    license = license_file.read()
 
 requirements = [
     'docopt>=0.6',
@@ -34,7 +29,7 @@ setup(
     },
     include_package_data=True,
     install_requires=requirements,
-    license=license,
+    license='MIT License',
     zip_safe=True,
     keywords='robtex',
     classifiers=[
