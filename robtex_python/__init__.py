@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+from .robtex_python import as_query, ip_query, pdns_forward, pdns_reverse  # noqa: F401
 
-from .robtex_python import as_query, ip_query, pdns_forward, pdns_reverse
-
-__author__ = """Floyd Hightower"""
+__author__ = "Floyd Hightower"
 __version__ = '1.0.2'
