@@ -1,0 +1,46 @@
+version: '3.4'
+
+services:
+  _base:
+    &base
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - ./:/code
+
+  _bump-base:
+    &bump-base
+    build:
+      dockerfile: bumpversion.dockerfile
+      context: .
+    volumes:
+      - ./:/code
+      - ~/.gitconfig:/root/.gitconfig
+
+  bump-patch:
+    <<: *bump-base
+    command: bumpversion patch
+
+  bump-minor:
+    <<: *bump-base
+    command: bumpversion minor
+
+  bump-major:
+    <<: *bump-base
+    command: bumpversion major
+
+  # a fully loaded development environment to test new code
+  dev:
+    <<: *base
+    command: ipython
+
+  # run tests
+  test:
+    <<: *base
+    command: pytest
+
+  # run linters
+  lint:
+    <<: *base
+    entrypoint: ./docker/lint.sh
