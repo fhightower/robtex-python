@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """Wrapper for the Robtex API."""
 
 from .requester import get
