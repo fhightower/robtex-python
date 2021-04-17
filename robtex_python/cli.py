@@ -23,7 +23,7 @@ Options:
 from docopt import docopt
 
 from .__init__ import __version__ as VERSION
-from .robtex_python import ip_query, as_query, pdns_forward, pdns_reverse
+from .robtex_python import as_query, ip_query, pdns_forward, pdns_reverse
 
 
 def main(arguments=None):
